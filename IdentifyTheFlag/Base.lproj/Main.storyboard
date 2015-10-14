@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="North_America-USA.png" translatesAutoresizingMaskIntoConstraints="NO" id="ndl-mq-if5">
+                                <rect key="frame" x="183" y="96" width="234" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Dvt-kQ-Pos"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dc9-5y-YSO">
+                                <rect key="frame" x="0.0" y="377" width="600" height="223"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF9-2v-5fL">
+                                <rect key="frame" x="253" y="299" width="93" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pkn-dB-Vtv">
+                                <rect key="frame" x="160" y="339" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="hK1-vU-zI8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Identify the Flag! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lai-9j-rHc">
+                                <rect key="frame" x="152" y="28" width="296" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ndl-mq-if5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="7MH-lB-5ey"/>
+                            <constraint firstItem="Lai-9j-rHc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Lg-BJ-qhW"/>
+                            <constraint firstItem="Dc9-5y-YSO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B7B-Aa-l5K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dc9-5y-YSO" secondAttribute="bottom" id="GsZ-4B-tIO"/>
+                            <constraint firstItem="Pkn-dB-Vtv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HxC-9e-64Q"/>
+                            <constraint firstItem="Dc9-5y-YSO" firstAttribute="top" secondItem="Pkn-dB-Vtv" secondAttribute="bottom" constant="8" id="KpA-Ew-hyj"/>
+                            <constraint firstItem="oF9-2v-5fL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PoJ-ZC-Ave"/>
+                            <constraint firstItem="ndl-mq-if5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vuu-9i-9T1"/>
+                            <constraint firstItem="Dc9-5y-YSO" firstAttribute="top" secondItem="oF9-2v-5fL" secondAttribute="bottom" constant="46" id="Wb1-Zp-H6d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ndl-mq-if5" secondAttribute="trailing" constant="10" id="afZ-Co-qzs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flagByCountry" destination="ndl-mq-if5" id="ZLr-Th-toI"/>
+                        <outlet property="inCountry" destination="Pkn-dB-Vtv" id="YHZ-hR-LwU"/>
+                        <outlet property="pickedCountry" destination="Dc9-5y-YSO" id="Ioy-dh-PJY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="244"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="North_America-USA.png" width="480" height="236"/>
+    </resources>
+</document>
